@@ -1,1 +1,178 @@
 # My-event
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebration Hub | Luxury Event Planning</title>
+    <style>
+        :root {
+            --primary: #d4af37; /* Gold */
+            --secondary: #222;
+            --white: #ffffff;
+            --gray: #f9f9f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Playfair Display', serif, Arial; }
+        body { background-color: var(--gray); color: #333; scroll-behavior: smooth; }
+
+        /* Navigation */
+        nav { background: rgba(0,0,0,0.9); color: white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; z-index: 1000; }
+        .logo { font-size: 1.8rem; font-weight: bold; letter-spacing: 2px; color: var(--primary); }
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { color: white; text-decoration: none; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s; }
+        nav ul li a:hover { color: var(--primary); }
+
+        /* Simple CSS Slider */
+        .slider { width: 100%; height: 90vh; overflow: hidden; position: relative; }
+        .slides { display: flex; width: 400%; height: 100%; animation: slide 20s infinite; }
+        .slide { width: 25%; height: 100%; background-size: cover; background-position: center; position: relative; }
+        
+        .slide-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; background: rgba(0,0,0,0.4); padding: 40px; border-radius: 10px; width: 80%; }
+        .slide-content h1 { font-size: 4rem; margin-bottom: 10px; }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(0); }
+            25% { transform: translateX(-25%); }
+            45% { transform: translateX(-25%); }
+            50% { transform: translateX(-50%); }
+            70% { transform: translateX(-50%); }
+            75% { transform: translateX(-75%); }
+            95% { transform: translateX(-75%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Gallery Section */
+        .gallery-section { padding: 80px 5%; text-align: center; }
+        .gallery-section h2 { font-size: 2.5rem; margin-bottom: 40px; }
+        .event-category { margin-bottom: 60px; }
+        .event-category h3 { color: var(--primary); margin-bottom: 20px; font-size: 1.8rem; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; }
+        
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 1000px; margin: 0 auto; }
+        .photo-card { position: relative; overflow: hidden; border-radius: 8px; height: 350px; }
+        .photo-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .photo-card:hover img { transform: scale(1.1); }
+        .img-caption { position: absolute; bottom: 0; background: rgba(0,0,0,0.7); color: white; width: 100%; padding: 10px; font-size: 0.9rem; }
+
+        /* Contact Section */
+        .contact { background: var(--secondary); color: white; padding: 60px 5%; text-align: center; }
+        .contact form { max-width: 600px; margin: 30px auto; }
+        .contact input, .contact textarea { width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 5px; }
+        .contact button { background: var(--primary); color: #000; padding: 15px 40px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem; }
+
+        footer { background: #111; color: #777; padding: 30px; text-align: center; }
+
+        @media (max-width: 768px) {
+            .photo-grid { grid-template-columns: 1fr; }
+            .slide-content h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">CROWNIXHUB</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="slider" id="home">
+        <div class="slides">
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80');">
+                <div class="slide-content"><h1>Dream Weddings</h1><p>Crafting your perfect love story.</p></div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1200&q=80');">
+                <div class="slide-content"><h1>Vibrant Birthdays</h1><p>Parties that you'll never forget.</p></div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80');">
+                <div class="slide-content"><h1>Grand Anniversaries</h1><p>Celebrating milestones in style.</p></div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1200&q=80');">
+                <div class="slide-content"><h1>Corporate Excellence</h1><p>Professional events with a touch of class.</p></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="gallery-section" id="gallery">
+        <h2>Our Event Portfolio</h2>
+
+        <div class="event-category">
+            <h3>Weddings</h3>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80" alt="Wedding 1">
+                    <div class="img-caption">Grand Ballroom Setup</div>
+                </div>
+                <div class="photo-card">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Wedding 2">
+                    <div class="img-caption">Outdoor Garden Ceremony</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="event-category">
+            <h3>Birthdays</h3>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="https://images.unsplash.com/photo-1530103043960-ef38714abb15?auto=format&fit=crop&w=600&q=80" alt="Birthday 1">
+                    <div class="img-caption">Colorful Theme Decor</div>
+                </div>
+                <div class="photo-card">
+                    <img src="https://images.unsplash.com/photo-1533294160022-41fbbd083fb7?auto=format&fit=crop&w=600&q=80" alt="Birthday 2">
+                    <div class="img-caption">Kids Magic Party</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="event-category">
+            <h3>Anniversaries</h3>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=600&q=80" alt="Anniversary 1">
+                    <div class="img-caption">Golden Jubilee Dinner</div>
+                </div>
+                <div class="photo-card">
+                    <img src="https://images.unsplash.com/photo-1522673607200-1648832cee98?auto=format&fit=crop&w=600&q=80" alt="Anniversary 2">
+                    <div class="img-caption">Romantic Rooftop Setting</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="event-category">
+            <h3>Corporate Parties</h3>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="https://images.unsplash.com/photo-1540575861501-7ad058a29233?auto=format&fit=crop&w=600&q=80" alt="Corporate 1">
+                    <div class="img-caption">Annual Tech Summit</div>
+                </div>
+                <div class="photo-card">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80" alt="Corporate 2">
+                    <div class="img-caption">Executive Gala Dinner</div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Book Your Event</h2>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Event Date (DD/MM/YYYY)">
+            <textarea rows="4" placeholder="How can we help make your event special?"></textarea>
+            <button type="submit">Check Availability</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Crown Event Management. Creating Memories.</p>
+    </footer>
+
+</body>
+</html>
